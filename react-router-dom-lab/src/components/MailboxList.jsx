@@ -7,12 +7,13 @@ const MailboxList = (props) => {
         <h2>Mailboxes!</h2>
         <ul>
             {props.mailbox.map((mail) => (
-                <li key={mail.boxholderRealName}>
+                <li key={mail.boxholderRealName} className='mail-box'>
                 
-                <Link to={`/pokemon/${mail._id}`}>
-                  {mail.boxholderRealName} ({mail.boxholderUsername})
+                <Link to={`/mailboxes/${mail._id}`}>
+                  <h4>{mail.boxholderRealName} (#{mail._id})</h4> 
+                  <strong>({mail.boxholderUsername}</strong>)
                 </Link>
-                
+
                 </li>
             ))}
         </ul>

@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom' // Allows navigation on clicks an
 
 const initialState = {
   boxholderRealName: ``,
-  boxHolderUsername: ``,
+  boxholderUsername: ``,
   boxSize: ``,
   boxholderLocation: ``,
   boxholderProfession: ``
@@ -23,7 +23,7 @@ const MailboxForm = (props) => {
     event.preventDefault()
     props.addMailbox(formData)
     setFormData(initialState)
-    navigate('/mailbox') // Navigates to new page
+    navigate('/mailboxes') // Navigates to new page
   }
 
   function handleChange({ target }) {
@@ -44,23 +44,23 @@ const MailboxForm = (props) => {
           onChange={handleChange}
         />
 
-        <label htmlFor="boxHolderUsername">Username:</label>
+        <label htmlFor="boxholderUsername">Username:</label>
         <input
           type="text"
-          id="boxHolderUsername"
-          name="boxHolderUsername"
-          value={formData.boxHolderUsername}
+          id="boxholderUsername"
+          name="boxholderUsername"
+          value={formData.boxholderUsername}
           onChange={handleChange}
         />
 
         <label htmlFor="boxSize">Size:</label>
-        <input
-          type="text"
-          id="boxSize"
-          name="boxSize"
-          value={formData.boxSize}
-          onChange={handleChange}
-        />
+        <select name="boxSize" id="boxSize" onChange={handleChange}>
+          
+          <option value={formData.boxSize}>Small</option>
+          <option value={formData.boxSize}>Medium</option>
+          <option value={formData.boxSize}>Large</option>
+          
+        </select>
 
         <label htmlFor="boxholderLocation">Location:</label>
         <input

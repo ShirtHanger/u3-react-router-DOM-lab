@@ -1,5 +1,9 @@
 /* src/index.css */
 
+html {
+  background: linear-gradient(red, silver)
+}
+
 body {
   padding: 16px;
   display: flex;
@@ -15,6 +19,8 @@ ul {
   padding: 0;
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
+  width: auto;
 }
 
 li {

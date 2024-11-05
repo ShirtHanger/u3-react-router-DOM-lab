@@ -10,6 +10,8 @@ import MailboxForm from './components/MailboxForm'
 
 import mailboxArray from './global' /* Importing my mailbox array for easier organization */
 
+import './index.css'
+
 const App = () => {
   const [mailbox, setMailbox] = useState(mailboxArray)
 
@@ -39,7 +41,7 @@ const App = () => {
         />
 
         {/* CATCH-ALL DEFAULT ROUTE, for errors */}
-        <Route path="*" element={<h2>Whoops, nothing here!</h2>} />
+        <Route path="*" element={<h2>Mailbox not found!</h2>} />
       </Routes>
     </>
   )
