@@ -41,7 +41,7 @@ const App = () => {
         />
 
         {/* CATCH-ALL DEFAULT ROUTE, for errors */}
-        <Route path="*" element={<h2>Mailbox not found!</h2>} />
+        <Route path="/*" element={<h2>Nothing is here!</h2>} />
       </Routes>
     </>
   )
